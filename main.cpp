@@ -3,8 +3,8 @@
  * Author: Raymond Brady
  *
  * Created on January 29, 2013, 8:03 AM
- * Last update: 31 Jan 2013
- * Covers tutorial through operators section. (++, --)
+ * Last update: 1 Feb 2013
+ * Covers tutorial through operators section.
  * Based on: http://www.cplusplus.com/doc/tutorial/
  */
 
@@ -34,9 +34,11 @@ int main ()
     int result;
     int e;
     int f, g;
+    float h;
     string firstname = "Raymond"; // c-like initialization
     string lastname("Brady"); // constructor initialization
     string fullname;
+    bool answer;
     
     //process
     c = 1;
@@ -63,12 +65,76 @@ int main ()
     f++; // f = f + 1;
     f--; // f = f - 1;
     
+// Relational and equality operators
+    // ==, !=, >, <, >=, <=
+    answer = (7 == 5); // evaluates to false
+    answer = (5 > 4);  // evaluates to true
+    answer = (3 != 2); // evaluates to true
+    answer = (6 >= 6); // evaluates to true
+    answer = (5 < 5);  // evaluates to false
+    answer = (a == 5);
+    answer = (2*3 >= 6); // evaluates to true
+    answer = ((b=2) == 2); // evaluates to true
+    answer = (2+2 > 4-1); // evaluates to true
+    
+// Logical operators !, &&, ||
+    // ! C++ operator for boolean operator NOT. Returns inverse of operand
+    answer = !(5 == 5); // evaluates to false since (5 == 5) would be true
+    answer = !(6 <= 4); // true because (6 <= 4) would be false.
+    answer = !true;     // evaluates to false
+    answer = !false;    // evaluates to true
+    
+    // && boolean logical operation AND. True if both operands are true
+    answer = ((5 == 5) && (3 > 6)); // evaluates false (true && false)
+    // || boolean logical operator OR. True if either operand is true.
+    answer = ((5 == 5) || (3 > 6)); // evaluates true (true || false)
+    
+// short-circuit evaluation
+    /*
+     * &&       If the left-hand side expression is false, the combined result
+     *          is false (right-hand side expression not evaluated)
+     * 
+     * ||       If the left-hand side expression is true, the combined result
+     *          is true (right-hand side expression not evaluated)
+     * 
+     * Important when right-hand side expression alters values
+     * if ((i<10)&&(++i<n)) {...}
+     */
+    
+// Conditional operator ?
+    f = 7==5 ? 4 : 3; // Returns 3, since 7 is not equal to 5
+    f = 7==5+2 ? 4 : 3; // Returns 4, since 7 is equal to 5+2
+    f = 5>3 ? a : b; // returns value of a since 5 is greater than 3
+    f = a>b ? a : b; // returns whichever is greater, a or b.
+    
+// Comma operator ,
+    // First assigns b value of 3, then assigns b+2 to variable a.
+    a = (b=3, b+2); // a equals 5 and b equals 3
+    
+// Explicit type casting
+    g = (int) PI; // returns 3 - C style
+    g = int (PI); // returns 3 - C++ Functional notation style
+    
+// sizeof()
+    // Returns size (In bytes) of a type or variable.
+    // Value returned is a constant, always determined before execution
+    h = sizeof(char); // Returns 1 because size of char is one-byte long
+    h = sizeof(a); // Returns the size of the variable a
+    h = sizeof("Hello world");
+    
+    
     // show the results
     cout << "C++ Tutorial practice code by " << fullname; // use string literal and declared variable
     cout << NEWLINE; // use defined constant
     cout << "result is: " << result << NEWLINE;
     cout << "a is: " << a << NEWLINE;
-    cout << "f is: " << f;
+    cout << "b is: " << b << NEWLINE;
+    cout << "c is: " << c << NEWLINE;
+    cout << "d is: " << d << NEWLINE;
+    cout << "e is: " << e << NEWLINE;
+    cout << "f is: " << f << NEWLINE;
+    cout << "g is: " << g << NEWLINE;
+    cout << "h is: " << h << NEWLINE;
     
     // terminate the program
     return 0;
