@@ -3,14 +3,15 @@
  * Author: Raymond Brady
  *
  * Created on January 29, 2013, 8:03 AM
- * Last update: 1 Feb 2013
- * Covers tutorial through operators section.
+ * Last update: 2 Feb 2013
+ * Covers tutorial through basic i/o section.
  * Based on: http://www.cplusplus.com/doc/tutorial/
  */
 
 // single line comment
 #include <iostream>
 #include <string>
+#include <sstream>
 using namespace std;
 
 // Defined constants are directives for the preprocessor. Each occurrence
@@ -123,18 +124,84 @@ int main ()
     h = sizeof("Hello world");
     
     
-    // show the results
+// show the results
+    // using cout in conjunction with the insertion operator <<
+    cout << ":: STANDARD OUTPUT (cout)" << NEWLINE;
     cout << "C++ Tutorial practice code by " << fullname; // use string literal and declared variable
     cout << NEWLINE; // use defined constant
     cout << "result is: " << result << NEWLINE;
-    cout << "a is: " << a << NEWLINE;
-    cout << "b is: " << b << NEWLINE;
-    cout << "c is: " << c << NEWLINE;
-    cout << "d is: " << d << NEWLINE;
-    cout << "e is: " << e << NEWLINE;
-    cout << "f is: " << f << NEWLINE;
-    cout << "g is: " << g << NEWLINE;
-    cout << "h is: " << h << NEWLINE;
+    cout << " a:" << a;
+    cout << " b:" << b;
+    cout << " c:" << c;
+    cout << " d:" << d;
+    cout << " e:" << e;
+    cout << " f:" << f;
+    cout << " g:" << g;
+    cout << " h:" << h << NEWLINE;
+    
+// Standard Output (cout)
+    cout << "This is a sentence." << "This is another sentence on same line. ";
+    cout << "This is boring but it shows you exactly how to use C++\n";
+    cout << "and the different ways\nthat you can insert a new line." << endl;
+    cout << "The endl manipulator produces a newline character, exactly\n";
+    cout << "as the insertion of \\n does, but it also has an additional" << endl;
+    cout << "behavior when it is used with buffered streams: the buffer" << endl;
+    cout << "is flushed. Anyway, cout will be an unbuffered stream in most" << endl;
+    cout << "cases, so you can generally use both the \\n escape character\n";
+    cout << "and the endl manipulator in order to specify a new line without\n";
+    cout << "any difference in it's bahvior." << endl;
+    cout << NEWLINE << NEWLINE;
+    
+// Standard Input (cin)
+    // using cin in conjunction with the extraction operator >>
+    cout << ":: STANDARD INPUT (cin)\n";
+    cout << "Enter your first name (one word only): ";
+    cin >> firstname;
+    cout << "How old are you " << firstname << ": ";
+    int age;
+    cin >> age;
+    // Try entering more than 1 character to see what can happen here.
+    cout << "Enter a key from the keyboard then press enter: ";
+    char key;
+    cin >> key;
+    // Try entering more than one word separated by a space to see what happens.
+    cout << "Enter your dogs name (one word only): ";
+    string dog;
+    cin >> dog; // Not a good way to capture strings
+    // request more than one datum from the user
+    cout << "Enter two integers separated by a space: ";
+    int dat1, dat2;
+    cin >> dat1 >> dat2;
+    // Using getline is the preferred method for user input
+    cin.ignore(); // ignore newline from previous cin.
+    cout << "Enter a full sentence: ";
+    string sentence;
+    getline (cin,sentence);
+    
+    // Show the results of input
+    cout << ":: INPUT RESULTS" << endl;
+    cout << " age:" << age;
+    cout << " key:" << key;
+    cout << " dog:" << dog;
+    cout << " Integer1:" << dat1;
+    cout << " Integer2:" << dat2 << endl;
+    cout << " Sentence: " << sentence << endl;
+    cout << NEWLINE << NEWLINE;
+    
+    // stringstream
+    cout << ":: STRINGSTREAM\n";
+    cout << "This shows an example of how to use stringstream to extract an\n";
+    cout << "integer from a string.\n\n";
+    string mystr;
+    int quantity=0;
+    float price=0;
+    cout << "Enter price: ";
+    getline (cin,mystr);
+    stringstream(mystr) >> price;
+    cout << "Enter quantity: ";
+    getline (cin,mystr);
+    stringstream(mystr) >> quantity;
+    cout << "Total price: " << price*quantity << endl;
     
     // terminate the program
     return 0;
