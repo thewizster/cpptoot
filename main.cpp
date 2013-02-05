@@ -4,7 +4,7 @@
  *
  * Created on January 29, 2013, 8:03 AM
  * Last update: 2 Feb 2013
- * Covers tutorial through basic i/o section.
+ * Covers tutorial through if else in Control Structures section.
  * Based on: http://www.cplusplus.com/doc/tutorial/
  */
 
@@ -186,6 +186,8 @@ int main ()
     cout << " Integer1:" << dat1;
     cout << " Integer2:" << dat2 << endl;
     cout << " Sentence: " << sentence << endl;
+    cout << "Press enter to continue...";
+    cin.ignore();
     cout << NEWLINE << NEWLINE;
     
     // stringstream
@@ -202,6 +204,66 @@ int main ()
     getline (cin,mystr);
     stringstream(mystr) >> quantity;
     cout << "Total price: " << price*quantity << endl;
+    cout << "Press enter to continue...";
+    cin.ignore();
+    cout << endl << endl;
+    
+// Conditional structure: if and else
+    cout << ":: CONDITIONAL STRUCTURE: if and else\n";
+    cout << "The if keyword is used to execute a block of code if the condition\n";
+    cout << "evaluates to true.\n\n";
+    cout << "If statement form: if (condition) statement\n\n";
+    cout << "NOTE: In this section of the tutorial the program may pause after displaying\n";
+    cout << "some code or text. Press the enter key and the program will continue.\n\n";
+    cout << "Here I initialize x to a value of 100:\n";
+    cout << "int x(100);\n\n";
+    cin.ignore();
+    int x(100);
+    cout << "Now I evaluate if x equals 100. If so, then I execute the code\n";
+    cout << "on the next line. This is a single statement conditional structure.\n\n";
+    cout << "if (x == 100)\n    cout << \"x is 100\";\n\n";
+    cin.ignore();
+    if (x == 100) // if x is equal to 100 then execute the statement
+        cout << "x is 100\n\n";
+    cin.ignore();
+    cout << "Now for an example of a compound statement block.\n\n";
+    cout << "if (x != 99)\n{\n";
+    cout << "    cout << \"Compound statement blocks can contain multiple statements.\"\n";
+    cout << "    cout << \"Each statement between the curly braces will be executed\"\n";
+    cout << "    cout << \"if the condition evaluates to true. In this case:\"\n";
+    cout << "    cout << \"x is not equal to 99 is a true condition.\"\n}\n";
+    cin.ignore();
+    if (x != 99)
+    {
+        cout << "Compound statement blocks can contain multiple statements.\n";
+        cout << "Each statement between the curly braces will be executed\n";
+        cout << "if the condition evaluates to true. In this case:\n";
+        cout << "x is not equal to 99 is a true condition.\n\n";
+    }
+    
+    cin.ignore();
+    
+    // else keyword
+    cout << "We can also specify what we want to happen if the condition is not true\n\n";
+    cout << "if (x == 100)\n  cout << \"x is 100\";\nelse\n  cout << \"x is not 100\";\n\n";
+    cin.ignore();
+    cout << "RESULT: ";
+    if (x == 100)
+        cout << "x is 100";
+    else
+        cout << "x is not 100";
+    cin.ignore();
+    
+    cout << "\nwe can use if else structures to verify a range of values.\n\n";
+    cout << "if (x > 0)\n        cout << \"x is positive.\";\nelse if (x < 0)\n        cout << \"x is negative.\";\nelse\n        cout << \"x is zero.\";\n\n";
+    cout << "RESULT: ";
+    if (x > 0)
+        cout << "x is positive.";
+    else if (x < 0)
+        cout << "x is negative.";
+    else
+        cout << "x is zero.";
+    cin.ignore();
     
     // terminate the program
     return 0;
