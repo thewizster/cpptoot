@@ -268,7 +268,7 @@ int main ()
 // ITERATION STRUCTURES (LOOPS)
     int n;
     cout << ":: ITERATION STRUCTURES (LOOPS)\n\n";
-    cout << "   The while loop\n\nThe format is:\n     while (expression) statement\n\n";
+    cout << "   The while loop\n\n   The format is:\n     while (expression) statement\n\n";
     cin.ignore();
     cout << "     while (n>0) {\n        cout << n << \", \";\n        --n;\n     }\n\n";
     cout << "Let's define n. What value would you like n to be? ";
@@ -287,10 +287,16 @@ int main ()
      --n; // decrease the value of n by one each loop. Ensures n will become zero
     }
     cout << "HAPPY NEW YEAR!!!\n\n";
+    cin.ignore();
     
+    cout << "   The do-while loop.\n\n   The format is:\n     do statement while (condition)\n\n";
+    cout << "   It functions exactly the same as the while loop, except that condition in the\n";
+    cout << "   do-while loop is evaluated after the execution of the statement. The statement will\n";
+    cout << "   execute at least once even if the condition is never fulfilled.\n\n";
+    cout << "   An example:\n";
+    cout << "      unsigned long n;\n      do {\n        cout << \"Enter number (0 to end): \";\n        cin >> n;\n        cout << \"You entered: \" << n << endl;\n      } while (n != 0);\n\n";
+    cin.ignore();
     
     // terminate the program
     return 0;
-    
-    
 }
