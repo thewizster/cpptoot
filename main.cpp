@@ -264,6 +264,24 @@ int main ()
     else
         cout << "x is zero.";
     cin.ignore();
+    cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+// ITERATION STRUCTURES (LOOPS)
+    int n;
+    cout << ":: ITERATION STRUCTURES (LOOPS)\n\n";
+    cout << "The while loop\n\nThe format is:\n     while (expression) statement\n\n";
+    cin.ignore();
+    cout << "     while (n>0) {\n        cout << n << \", \";\n        --n;\n     }\n\n";
+    cout << "Let's define n. What value would you like n to be? ";
+    cin >> n;
+    cin.ignore();
+    cout << "Thanks! I have:\n     int n(" << n << ");\n\n";
+    cout << "Now, press enter and I'll run the loop...";
+    cin.ignore();
+    cout << "\n";
+    while (n>0) {
+     cout << n << ", ";
+     --n;
+    }
     
     // terminate the program
     return 0;
