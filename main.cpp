@@ -268,7 +268,7 @@ int main ()
 // ITERATION STRUCTURES (LOOPS)
     int n;
     cout << ":: ITERATION STRUCTURES (LOOPS)\n\n";
-    cout << "The while loop\n\nThe format is:\n     while (expression) statement\n\n";
+    cout << "   The while loop\n\nThe format is:\n     while (expression) statement\n\n";
     cin.ignore();
     cout << "     while (n>0) {\n        cout << n << \", \";\n        --n;\n     }\n\n";
     cout << "Let's define n. What value would you like n to be? ";
@@ -278,10 +278,16 @@ int main ()
     cout << "Now, press enter and I'll run the loop...";
     cin.ignore();
     cout << "\n";
+    // while n is greater than zero the loop will continue. In order to avoid
+    // an infinite loop we must ensure that the value of n becomes zero at some
+    // point. The value of n becoming zero causes the expression to be false
+    // which stops the loop.
     while (n>0) {
      cout << n << ", ";
-     --n;
+     --n; // decrease the value of n by one each loop. Ensures n will become zero
     }
+    cout << "HAPPY NEW YEAR!!!\n\n";
+    
     
     // terminate the program
     return 0;
