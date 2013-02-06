@@ -296,6 +296,13 @@ int main ()
     cout << "   An example:\n";
     cout << "      unsigned long n;\n      do {\n        cout << \"Enter number (0 to end): \";\n        cin >> n;\n        cout << \"You entered: \" << n << endl;\n      } while (n != 0);\n\n";
     cin.ignore();
+    unsigned long i;
+    do {
+        cout << "Enter number (0 to end): ";
+        cin >> i;
+        cout << "You entered: " << i << "\n";
+    } while (i != 0);
+    
     
     // terminate the program
     return 0;
