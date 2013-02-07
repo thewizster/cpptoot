@@ -320,7 +320,24 @@ int main ()
         cout << j << ", ";
     }
     cout << "FIRE!\n";
-    
+
+    // Jump statements
+    cout << "\n\n:: JUMP STATEMENTS\n\n";
+    cout << "   The break statement\n\n";
+    cout << "   Using break we can leave a loop even if the condition for\n";
+    cout << "   it's end is not fulfilled. Here is a variation of the previous\n";
+    cout << "   for loop. Press enter to continue...";
+    cin.ignore();
+    for (int j=10; j>0; j--){
+        cout << j << ", ";
+        if (j==3)
+        {
+            cout << "countdown aborted!";
+            break;
+        }
+    }
+    cout << "\n\n   Press enter to continue:";
+    cin.ignore();
     // terminate the program
     return 0;
 }
