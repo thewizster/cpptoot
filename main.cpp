@@ -4,7 +4,7 @@
  *
  * Created on January 29, 2013, 8:03 AM
  * Last update: 2 Feb 2013
- * Covers tutorial through if else in Control Structures section.
+ * Covers tutorial through loops in Control Structures section.
  * Based on: http://www.cplusplus.com/doc/tutorial/
  */
 
@@ -302,7 +302,24 @@ int main ()
         cin >> i;
         cout << "You entered: " << i << "\n";
     } while (i != 0);
-    
+    cin.ignore();
+    cout << "\n\n\n\n\n\n\n\n\n";
+    // The for loop
+    cout << "   The for loop\n\n   The format is:\n     for (initialization; ";
+    cout << "condition; increase) statement\n\n";
+    cout << "   The for loop repeats statement while condition remains true,\n";
+    cout << "   like the while loop. It also provides for an init statement and\n";
+    cout << "   and an increase statement. It is designed to perform a repetitive\n";
+    cout << "   action with a counter which is initialized and increased on each\n";
+    cout << "   iteration.\n   Press enter to continue...";
+    cin.ignore();
+    cout << "\n\n     for (int n=10; n>0; n--) {\n       cout << n << \", \";\n     }\n     cout << \"FIRE!\" << endl;\n\n";
+    cout << "Press enter to continue...";
+    cin.ignore();
+    for (int j=10; j>0; j--) {
+        cout << j << ", ";
+    }
+    cout << "FIRE!\n";
     
     // terminate the program
     return 0;
