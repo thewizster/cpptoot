@@ -3,8 +3,8 @@
  * Author: Raymond Brady
  *
  * Created on January 29, 2013, 8:03 AM
- * Last update: 2 Feb 2013
- * Covers tutorial through loops in Control Structures section.
+ * Last update: 11 Feb 2013
+ * Covers tutorial through Control Structures section.
  * Based on: http://www.cplusplus.com/doc/tutorial/
  */
 
@@ -338,6 +338,64 @@ int main ()
     }
     cout << "\n\n   Press enter to continue:";
     cin.ignore();
+    
+    cout << "\n\n\n\n\n\n\n\n\n\n\n\n";
+    cout << "   The continue statement\n\n";
+    cout << "   continue causes the program to skip the rest of the loop in\n";
+    cout << "   the current iteration as if the end of the statement has\n";
+    cout << "   been reached. If you look close at the results you will see\n";
+    cout << "   that there is no 5 in the countdown. Press enter to run the code.\n\n";
+    cin.ignore();
+    
+    for (int k=10; k>0; k--)
+    {
+        if (k==5) continue;
+        cout << k << ", ";
+    }
+    cout << "HAPPY NEW YEAR!!!";
+    cin.ignore();
+    
+    // The selective structure: switch
+    string myans;
+    int mynum;
+    cout << "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n";
+    cout << "   the switch statement checks several constant values for an expression\n";
+    cout << "   Similar to, and having the same results as, an if-else block.\n";
+    cout << "   Take a peek at this code to understand how this works.\n\n";
+    do {
+        cout << "\n\n   What number is your favorite? (zero to exit loop)";
+        getline (cin,myans);
+        stringstream(myans) >> mynum;
+        cout << "\n\n";
+        switch (mynum) {
+            case 1:
+                cout << "     Number 1 is the best...";
+                break;
+            case 2:
+                cout << "     2 is a popular choice...";
+                break;
+            case 3:
+                cout << "     Number 3 ...";
+                break;
+            case 4:
+                cout << "     4 guys walk into a bar...";
+                break;
+            case 5:
+                cout << "     You also have 5 fingers on each hand...";
+                break;
+            default:
+                cout << "     You chose " << mynum << "...";
+        }
+    } while (mynum!=0);
+    cout << "\n\nPress enter to continue:";
+    cin.ignore();
+    cout << "\n\n\n\n\n\n\n\n\n\n";
+    cout << "   Thank you for looking at this tutorial application. If it\n";
+    cout << "   has been helpful to you please send me know. If you have an idea\n";
+    cout << "   on how the code can be improved to make learning c++ basics easier,\n";
+    cout << "   please make the code changes and submit them to me. If I find them\n";
+    cout << "   helpful I will update the code and give you credit.";
+    
     // terminate the program
     return 0;
 }
