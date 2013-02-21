@@ -11,10 +11,12 @@ using namespace std;
 #define PI 3.14159 // Defined constant
 #define NLINE '\n' // defined constant
 
+// Function declaration is in this format:
+// type name ( parameter1, parameter2, ...) { statements }
+// void is the return type, varconop is the name, there are no parameters
 void varconop()
 {
-    // Global variables go here. Outside main()
-    int test(10);
+    // variables declaration
     int a = 5; // c-like initialization. Value of 5
     int d(6); // constructor initialization. Value of 6
     int b, c;
