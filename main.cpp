@@ -14,7 +14,8 @@
 #include <sstream>
 using namespace std;
 
-int varconop(); // forward declaration using function prototype
+int varconop(); // forward declaration using a function prototype
+
 #define NEWLINE '\n' // Defined constant
 
 int main ()
@@ -26,7 +27,9 @@ int main ()
     // Variable declaration
     string yourname;
     
-    //  This function includes code samples through basic output section
+// Functions I
+    //  varconop function includes code samples through basic output section
+    // This function is defined in the basics1.cpp file
     varconop(); // do stuff to variables. See basics1.cpp file... 
     
    
