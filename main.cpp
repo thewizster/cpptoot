@@ -3,8 +3,8 @@
  * Author: Raymond Brady
  *
  * Created on January 29, 2013, 8:03 AM
- * Last update: 11 Feb 2013
- * Covers tutorial through Control Structures section.
+ * Last update: 21 Feb 2013
+ * Covers tutorial through Functions I and II sections.
  * Based on: http://www.cplusplus.com/doc/tutorial/
  */
 
